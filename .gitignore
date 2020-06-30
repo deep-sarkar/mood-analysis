@@ -5,3 +5,4 @@ mood_analyser/migrations/*
 mood_analyser/tests/__pycache__/*
 mood_analyser/tests/.pytest_cache/*
 myproject/myproject/.pytest_cache/*
+myproject/db.sqlite3
