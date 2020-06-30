@@ -1,12 +1,27 @@
 import pytest
-from .. import views
-from django.test import RequestFactory
-pytestmark = pytest.mark.django_db
+from .. service import MoodAnalyser
 
-class Test_MoodAnalyser:
+class TestMoodAnalyser:
+    def test_happy_mood_returns_100(self):
+        message = 'I am happy today.'
+        obj = MoodAnalyser()
+        response = obj.analyseMood(message) 
+        assert response['code'] == 100
 
-    def test_if_mood_is_happy_returns_100(self):
-        message = "I'm happy today." 
-        req = RequestFactory().post('/',message)
-        resp = views.MoodAnalyserView.as_view()(req) 
-        assert resp.data['code'] == 101
+    def test_sad_mood_returns_101(self):
+        message = 'I am sad today.'
+        obj = MoodAnalyser()
+        response = obj.analyseMood(message) 
+        assert response['code'] == 101
+    
+    def test_null_raise_exception_and_returns_100(self):
+        message = ''
+        obj = MoodAnalyser()
+        response = obj.analyseMood(message) 
+        assert response['code'] == 100
+
+    def test_without_mood_raise_exception_and_returns_102(self):
+        message = 'hello there, how are you.'
+        obj = MoodAnalyser()
+        response = obj.analyseMood(message) 
+        assert response['code'] == 102
