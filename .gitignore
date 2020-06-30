@@ -6,3 +6,6 @@ myproject/mood_analyser/tests/__pycache__/*
 myproject/mood_analyser/tests/.pytest_cache/*
 myproject/myproject/.pytest_cache/*
 myproject/db.sqlite3
+.vscode/*
+myproject/myproject/__pycache__/*
+
