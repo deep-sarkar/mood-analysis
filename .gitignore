@@ -1,8 +1,8 @@
 env/*
 myproject/.pytest_cache/*
-mood_analyser/__pycache__/*
-mood_analyser/migrations/*
-mood_analyser/tests/__pycache__/*
-mood_analyser/tests/.pytest_cache/*
+myproject/mood_analyser/__pycache__/*
+myproject/mood_analyser/migrations/*
+myproject/mood_analyser/tests/__pycache__/*
+myproject/mood_analyser/tests/.pytest_cache/*
 myproject/myproject/.pytest_cache/*
 myproject/db.sqlite3
