@@ -13,8 +13,4 @@ class MoodAnalyser:
            return {'code':100,'msg':response[100]}
         elif 'sad' in message :
             return {'code':101,'msg':response[101]}
-        else:
-            try:
-                if_not_happy_not_sad_will_raise_MoodAnalysisException(message)
-            except MoodAnalysisException as e:
-                 return {'msg':e.msg,'code':e.code}
+        return {'code':102,'msg':response[102]}
